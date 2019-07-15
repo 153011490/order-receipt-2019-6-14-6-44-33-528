@@ -7,6 +7,7 @@ package org.katas.refactoring;
  * total sales tax) and prints it.
  */
 public class OrderReceipt {
+    public static final double TAX_RATE = 0.10;
     private Order order;
 
     public OrderReceipt(Order order) {
@@ -41,7 +42,7 @@ public class OrderReceipt {
     }
 
     public double calculateSalesTax(LineItem lineItem){
-        return lineItem.getTotalAmount() * .10;
+        return lineItem.getTotalAmount() * TAX_RATE;
     }
 
     public void printLineItems(StringBuilder output,LineItem lineItem){

@@ -19,9 +19,7 @@ public class OrderReceipt {
         // print headers
         printHeader(output);
 
-        output.append(order.getCustomerName());
-        output.append(order.getCustomerAddress());
-//        output.append(order.getCustomerLoyaltyNumber());
+        printCustomerNameAndAddress(output);
 
         // prints lineItems
         double totalSalesTax = 0d;
@@ -63,6 +61,10 @@ public class OrderReceipt {
 
     public void printHeader(StringBuilder output){
         output.append("======Printing Orders======\n");
+    }
+
+    public void printCustomerNameAndAddress(StringBuilder output){
+        output.append(order.getCustomerName()).append(order.getCustomerAddress());
     }
 
 }
